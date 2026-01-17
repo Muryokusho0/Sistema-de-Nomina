@@ -16,7 +16,7 @@ namespace Sistema_de_Nomina
             this.HorasTrabajadas = HorasTrabajadas;
         }
 
-        public decimal CalcularPago()
+        public override decimal CalcularPago()
         {
             if (HorasTrabajadas <= 40)
             {

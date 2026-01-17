@@ -44,5 +44,8 @@ internal class Program
 
         Menu menu = new Menu(empleadosAsalariados, empleadosPorHoras, empleadosPorComision, empleadosAsalariadosPorComision);
         menu.MostrarMenu();
+        Console.WriteLine("Presione una tecla para continuar...");
+        Console.ReadKey();
+
     }
 }

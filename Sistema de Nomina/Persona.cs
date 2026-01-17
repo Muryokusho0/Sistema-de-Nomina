@@ -25,5 +25,11 @@ namespace Sistema_de_Nomina
 
         public abstract void ActualizarDesdeConsola();
 
+        public abstract decimal CalcularPago();
+        public override string ToString()
+        {
+            return $"Nombre: {primerNombre} | Pago: {CalcularPago():N2}";
+        }
+
     }
 }

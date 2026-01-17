@@ -14,7 +14,7 @@ namespace Sistema_de_Nomina
             this.salarioSemanal = salarioSemanal;
         }
 
-        public decimal CalcularPago()
+        public override decimal CalcularPago()
         {
             return (decimal)salarioSemanal;
         }

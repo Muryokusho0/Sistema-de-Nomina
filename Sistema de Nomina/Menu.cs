@@ -113,10 +113,10 @@ namespace Sistema_de_Nomina
 
                     case "2":
                         ImprimirLista(
-    "EMPLEADOS ASALARIADOS",
-    "Pago semanal = salarioSemanal",
-    empleadosAsalariados
-);
+                            "EMPLEADOS ASALARIADOS",
+                            "Pago semanal = salarioSemanal",
+                            empleadosAsalariados
+                        );
 
                         ImprimirLista(
                             "EMPLEADOS POR HORAS",

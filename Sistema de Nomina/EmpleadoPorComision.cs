@@ -16,7 +16,7 @@ namespace Sistema_de_Nomina
             this.tarifaComision = tarifaComision;
         }
 
-        public decimal CalcularPago()
+        public override decimal CalcularPago()
         {
             return (decimal)(ventasBrutas * tarifaComision);
         }
