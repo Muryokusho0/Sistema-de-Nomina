@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Sistema_de_Nomina
+﻿namespace Sistema_de_Nomina
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+
     internal class EmpleadoPorComision : Persona
     {
         public int ventasBrutas { get; private set; }
+
         public double tarifaComision { get; private set; }
 
         public EmpleadoPorComision(string primerNombre, string apellidoPaterno, int numeroSeguroSocial, int ventasBrutas, double tarifaComision)

@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Sistema_de_Nomina
+﻿namespace Sistema_de_Nomina
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+
     internal class EmpleadoAsalariadoPorComisión : EmpleadoPorComision
     {
         public decimal salarioBase { get; private set; }
+
         public EmpleadoAsalariadoPorComisión(string primerNombre, string apellidoPaterno, int numeroSeguroSocial, int ventasBrutas, double tarifaComision, decimal salarioBase)
             : base(primerNombre, apellidoPaterno, numeroSeguroSocial, ventasBrutas, tarifaComision)
         {

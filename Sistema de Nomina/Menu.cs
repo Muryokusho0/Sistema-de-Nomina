@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Sistema_de_Nomina
+﻿namespace Sistema_de_Nomina
 {
+    using System;
+    using System.Collections;
+    using System.Collections.Generic;
+    using System.Text;
+
     internal class Menu
     {
         private void ImprimirLista(
@@ -27,8 +27,11 @@ namespace Sistema_de_Nomina
         }
 
         private readonly ArrayList empleadosAsalariados;
+
         private readonly ArrayList empleadosPorHoras;
+
         private readonly ArrayList empleadosPorComision;
+
         private readonly ArrayList empleadosAsalariadosPorComision;
 
         public Menu(ArrayList a, ArrayList h, ArrayList c, ArrayList ac)
@@ -65,6 +68,7 @@ namespace Sistema_de_Nomina
                 Console.WriteLine("El elemento seleccionado no es un empleado válido");
             }
         }
+
         public void MostrarMenu()
         {
             while (true)

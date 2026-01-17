@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Sistema_de_Nomina
+﻿namespace Sistema_de_Nomina
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+
     internal class EmpleadoPorHoras : Persona
     {
         public decimal SueldoPorHora { get; private set; }
+
         public int HorasTrabajadas { get; private set; }
 
         public EmpleadoPorHoras(string apellidoPaterno, int numeroSeguroSocial,decimal SueldoPorHora, int HorasTrabajadas) 

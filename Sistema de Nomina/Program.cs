@@ -46,6 +46,5 @@ internal class Program
         menu.MostrarMenu();
         Console.WriteLine("Presione una tecla para continuar...");
         Console.ReadKey();
-
     }
 }

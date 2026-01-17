@@ -1,13 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Sistema_de_Nomina
+﻿namespace Sistema_de_Nomina
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+
     internal abstract class Persona
     {
         public string primerNombre { get; protected set; }
+
         public string apellidoPaterno { get; protected set; }
+
         public int numeroSeguroSocial { get; protected set; }
 
         protected Persona(string primerNombre, string apellidoPaterno, int numeroSeguroSocial)
@@ -26,10 +28,10 @@ namespace Sistema_de_Nomina
         public abstract void ActualizarDesdeConsola();
 
         public abstract decimal CalcularPago();
+
         public override string ToString()
         {
             return $"Nombre: {primerNombre} | Pago: {CalcularPago():N2}";
         }
-
     }
 }
