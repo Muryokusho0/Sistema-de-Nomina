@@ -7,6 +7,25 @@ namespace Sistema_de_Nomina
 {
     internal class Menu
     {
+        private void ImprimirLista(
+        string titulo,
+        string formula,
+        ArrayList lista)
+        {
+            Console.WriteLine("\n====================================");
+            Console.WriteLine(titulo);
+            Console.WriteLine("Cálculo:");
+            Console.WriteLine(formula);
+            Console.WriteLine("====================================\n");
+
+            for (int i = 0; i < lista.Count; i++)
+            {
+                Console.WriteLine($"{i}. {lista[i]}");
+            }
+
+            Console.WriteLine();
+        }
+
         private readonly ArrayList empleadosAsalariados;
         private readonly ArrayList empleadosPorHoras;
         private readonly ArrayList empleadosPorComision;
@@ -46,12 +65,13 @@ namespace Sistema_de_Nomina
                 Console.WriteLine("El elemento seleccionado no es un empleado válido");
             }
         }
-        public void MostrarMenu() {
+        public void MostrarMenu()
+        {
             while (true)
             {
                 Console.WriteLine("\n=== SISTEMA DE NÓMINA ===");
                 Console.WriteLine("1. Actualizar informacion");
-                Console.WriteLine("2. Salir");
+                Console.WriteLine("2. Generar Reporte");
                 Console.WriteLine("3. Salir");
                 Console.Write("\nSeleccione una opción: ");
 
@@ -92,6 +112,35 @@ namespace Sistema_de_Nomina
                         break;
 
                     case "2":
+                        ImprimirLista(
+    "EMPLEADOS ASALARIADOS",
+    "Pago semanal = salarioSemanal",
+    empleadosAsalariados
+);
+
+                        ImprimirLista(
+                            "EMPLEADOS POR HORAS",
+                            "Si horas ≤ 40:\n" +
+                            "  pago = sueldoPorHora × horasTrabajadas\n" +
+                            "Si horas > 40:\n" +
+                            "  pago = (sueldoPorHora × 40) + (sueldoPorHora × 1.5 × (horasTrabajadas - 40))",
+                            empleadosPorHoras
+                        );
+
+                        ImprimirLista(
+                            "EMPLEADOS POR COMISIÓN",
+                            "Pago semanal = ventasBrutas × tarifaComision",
+                            empleadosPorComision
+                        );
+
+                        ImprimirLista(
+                            "EMPLEADOS ASALARIADOS POR COMISIÓN",
+                            "Pago semanal = (ventasBrutas × tarifaComision) + salarioBase + (salarioBase × 0.10)",
+                            empleadosAsalariadosPorComision
+                        );
+
+                        return;
+                    case "3":
                         Console.WriteLine("\nSaliendo del sistema...");
                         return;
 
